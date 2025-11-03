@@ -1,0 +1,360 @@
+/* === HEADER === */
+.header {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
+.logo {
+  max-width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  animation: sunGlow 4s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 50px;
+  display: flex;
+}
+
+
+
+.header .navigation {
+  color: #333;
+  transition: all 0.3s ease;
+  height: 20px;
+  gap: 10px;
+  padding-top: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  color: black;
+  font-family: "Times New Roman", Helvetica;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, font-weight 0.3s ease;
+}
+
+.navigation a:hover {
+  color: orange;
+  text-shadow: 2px 2px 5px yellow !important;
+  font-weight: bold;
+}
+
+/* === TITRES === */
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 0px;
+width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* ------------------ BASE ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   body {
+    padding: 33px;
+    font-family: 'Times New Roman', serif;
+    overflow: hidden; /* pas de scroll */
+    height: 1080px; /* limite en hauteur */
+   }
+   
+   span {
+
+    font-family: 'Alata', sans-serif;
+    font-weight: normal;
+   
+   }
+/* === SECTION NEWSLETTER === */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 400px; /* Hauteur de base */
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  
+  /* Conteneur principal */
+  .newsletter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* même taille que la section */
+  }
+  
+  /* === FORMULAIRE === */
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centre verticalement le contenu */
+    align-items: flex-start; /* aligne le contenu à gauche */
+    gap: 15px;
+    width: 100%;
+    height: 100%; /* prend la taille de la section */
+    max-width: 1200px;
+    background: rgba(237, 156, 70, 0.6);
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  /* === TITRE === */
+  .newsletter h3 {
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', serif;
+    text-align: left; /* aligné à gauche */
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  /* === FORM GROUP === */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  /* === BOUTON === */
+  .btn-envoyer {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    margin-top: 20px;
+    align-self: flex-start; /* bouton aligné à gauche */
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
+    background: white;
+    color: black;
+    border: none;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-envoyer:hover {
+    background: black;
+    color: white;
+  }
+
+  
+ /* ------------------ SECTION CONTACT ------------------ */
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    flex: 1; /* prend tout l’espace restant disponible */
+    margin: 30px auto 0 auto;
+padding-left: 20px;
+    box-sizing: border-box;
+   
+  }
+  
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 100%;
+  }
+  
+  .contact-left p {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .contact-left strong {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+  }
+  
+  .contact-map {
+    width: 38%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  
+  .contact-map img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+   
+  }
+
+  @media screen and (max-width: 840px) {
+  
+    .contact {
+        align-items: center;
+      }
+    .header {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding-top: 20px;
+    }
+  
+    .header-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+  
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+  
+    h1 {
+      font-size: 35px;
+      text-align: center;
+    }
+  
+   
+  
+    .navigation {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+    }
+  
+    .navigation a {
+      font-size: 15px;
+    }
+  
+    body {
+    justify-content: center;
+    }
+    }
+   
+   /* ------------------ RESPONSIVE ------------------ */
+
+ 
+
+  
+    @media (max-width: 590px) {
+
+            /* Corps */
+    body {
+        padding: 20px;
+        overflow-y: auto;
+        height: auto; /* permet le scroll sur mobile */
+      }
+    
+      /* Newsletter */
+      .newsletter h3 {
+        font-size: 24px;
+        text-align: center;
+        line-height: 1.3;
+      }
+    
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            height: auto;
+            align-items: center;  /* centre horizontalement tout le contenu */
+            justify-content: center;
+            padding: 0;           /* supprime padding gauche qui décale */
+        }
+      
+        .contact-map {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center; /* centre l'image horizontalement */
+            align-items: center;     /* centre verticalement */
+            padding: 0;              /* supprime tout padding qui pousse l'image */
+        }
+      
+        .contact-map img {
+            width: 60%;      /* ajuste largeur pour mobile */
+            max-width: 300px; /* limite taille si écran très large */
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;  /* évite les décalages inline */
+            margin: 0 auto;  /* garantit centrage */
+        }
+      
+        .contact-left {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        h2 {
+            font-size: 40px;
+            
+          }
+
+          .contact-left p {
+            font-size: 15px;
+          }
+
+          .header {
+           padding-bottom: 20px;
+          }
+      }
+      
+  
+  
