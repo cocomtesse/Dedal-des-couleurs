@@ -1,0 +1,404 @@
+/* === RESET ET BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  cursor: url('paintbrush.png'), auto;
+  margin: 0;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Times New Roman", Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+}
+
+span {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.rangees {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* === ANIMATIONS === */
+@keyframes sunGlow {
+  0% { box-shadow: 0 0 20px 5px rgba(255, 204, 102, 1); }
+  50% { box-shadow: 0 0 150px 20px rgba(255, 204, 102, 1); }
+  100% { box-shadow: 0 0 20px 5px rgba(255, 204, 102, 1); }
+}
+
+/* === HEADER === */
+.header {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  animation: sunGlow 4s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 50px;
+  display: flex;
+}
+
+header img {
+  width: 70px;
+  height: 70px;
+}
+
+.header .navigation {
+  color: #333;
+  transition: all 0.3s ease;
+  height: 20px;
+  gap: 10px;
+  padding-top: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  color: black;
+  font-family: "Times New Roman", Helvetica;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, font-weight 0.3s ease;
+}
+
+.navigation a:hover {
+  color: orange;
+  text-shadow: 2px 2px 5px yellow !important;
+  font-weight: bold;
+}
+
+/* === TITRES === */
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 60px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* === GALERIE === */
+.premiereoeuvre,
+.deuxiemeoeuvre,
+.troisiemeoeuvre,
+.quatriemeoeuvre,
+.cinquiemeoeuvre,
+.sixiemeoeuvre {
+  flex: 1 1 250px;
+  max-width: 274px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.premiereoeuvre,
+.quatriemeoeuvre {
+  margin-right: 150px;
+}
+
+.troisiemeoeuvre,
+.sixiemeoeuvre {
+  margin-left: 150px;
+}
+
+.premiereoeuvre img,
+.deuxiemeoeuvre img,
+.troisiemeoeuvre img,
+.quatriemeoeuvre img,
+.cinquiemeoeuvre img,
+.sixiemeoeuvre img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  max-width: 240px;
+}
+
+.premiereoeuvre,
+.deuxiemeoeuvre,
+.troisiemeoeuvre {
+  padding-bottom: 30px;
+}
+
+.premiereoeuvre img:hover,
+.deuxiemeoeuvre img:hover,
+.troisiemeoeuvre img:hover,
+.quatriemeoeuvre img:hover,
+.cinquiemeoeuvre img:hover,
+.sixiemeoeuvre img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 145, 77, 0.7);
+}
+
+.premiereoeuvre p,
+.deuxiemeoeuvre p,
+.troisiemeoeuvre p,
+.quatriemeoeuvre p,
+.cinquiemeoeuvre p,
+.sixiemeoeuvre p {
+  margin-top: 12px;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* === RESPONSIVE 1190px === */
+@media (max-width: 1190px) {
+  .premiereoeuvre,
+  .quatriemeoeuvre {
+    margin-right: 20px;
+  }
+
+  .troisiemeoeuvre,
+  .sixiemeoeuvre {
+    margin-left: 20px;
+  }
+
+  .premiereoeuvre,
+  .deuxiemeoeuvre,
+  .troisiemeoeuvre,
+  .quatriemeoeuvre,
+  .cinquiemeoeuvre,
+  .sixiemeoeuvre {
+    max-width: 30%;
+  }
+}
+
+/* === RESPONSIVE LARGE DESKTOP / TABLETTE === */
+@media (max-width: 1210px) {
+  .premiereoeuvre,
+  .quatriemeoeuvre {
+    margin-right: 20px;
+  }
+
+  .troisiemeoeuvre,
+  .sixiemeoeuvre {
+    margin-left: 20px;
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .navigation {
+    width: auto;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px;
+  }
+
+  .navigation a {
+    font-size: 20px;
+  }
+}
+
+/* === 2 PAR 2 A PARTIR DE 870px === */
+@media (max-width: 870px) {
+  .premiereoeuvre,
+  .deuxiemeoeuvre,
+  .troisiemeoeuvre,
+  .quatriemeoeuvre,
+  .cinquiemeoeuvre,
+  .sixiemeoeuvre {
+    flex: 1 1 45%;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 250px;
+  }
+
+  .premiereoeuvre img,
+  .deuxiemeoeuvre img,
+  .troisiemeoeuvre img,
+  .quatriemeoeuvre img,
+  .cinquiemeoeuvre img,
+  .sixiemeoeuvre img {
+    width: 200px;
+  }
+
+  .rangees {
+    gap: 0px;
+  }
+
+  body {
+    padding: 20px;
+  }
+}
+
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .header {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding-top: 20px;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .navigation a {
+    font-size: 15px;
+  }
+
+  .rangees {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .premiereoeuvre,
+  .deuxiemeoeuvre,
+  .troisiemeoeuvre,
+  .quatriemeoeuvre,
+  .cinquiemeoeuvre,
+  .sixiemeoeuvre {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+  }
+
+  .premiereoeuvre img,
+  .deuxiemeoeuvre img,
+  .troisiemeoeuvre img,
+  .quatriemeoeuvre img,
+  .cinquiemeoeuvre img,
+  .sixiemeoeuvre img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+}
+
+/* === EXTRA PETITS ÉCRANS === */
+@media (max-width: 400px) {
+  .rangees {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .premiereoeuvre img,
+  .deuxiemeoeuvre img,
+  .troisiemeoeuvre img,
+  .quatriemeoeuvre img,
+  .cinquiemeoeuvre img,
+  .sixiemeoeuvre img {
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .premiereoeuvre p,
+  .deuxiemeoeuvre p,
+  .troisiemeoeuvre p,
+  .quatriemeoeuvre p,
+  .cinquiemeoeuvre p,
+  .sixiemeoeuvre p
+  {
+    line-height: 1.1;
+  }
+  h2 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 44px;
+  }
+  
+}

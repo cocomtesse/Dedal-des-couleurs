@@ -1,0 +1,319 @@
+/* ========= ANIMATIONS ========= */
+@keyframes sunGlow {
+    0% { box-shadow: 0 0 20px 5px rgba(255, 204, 102, 1); }
+    50% { box-shadow: 0 0 150px 20px rgba(255, 204, 102, 1); }
+    100% { box-shadow: 0 0 20px 5px rgba(255, 204, 102, 1); }
+  }
+  
+  /* ========= RESET GLOBAL ========= */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background: #ffffff;
+    color: #000;
+    cursor: url('paintbrush.png'), auto;
+  }
+  
+  /* ========= STRUCTURE GLOBALE ========= */
+  .page {
+    padding-left: 60px;
+    padding-top: 75px;
+    width: calc(100% - 60px);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* ========= HEADER ========= */
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .header-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 89px;
+    height: 89px;
+    object-fit: cover;
+    border-radius: 6px;
+    animation: sunGlow 4s ease-in-out infinite;
+    border-radius: 50%;
+  }
+  
+  .site-title-index {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: normal; /* permet de passer sur deux lignes */
+  }
+  
+  /* ========= NAVIGATION ========= */
+  .navigation {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 90px;
+    flex-wrap: wrap;
+    padding-left: 100px;
+  }
+  
+  .navigation a {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease, font-weight 0.3s ease;
+  }
+  
+  .navigation a:hover {
+    color: orange;
+    text-shadow: 2px 2px 5px yellow;
+    font-weight: bold;
+  }
+  
+  /* ========= CONTENU PRINCIPAL ========= */
+  .content {
+    display: flex;
+    gap: 50px;
+    margin-top: 47px;
+    align-items: flex-start;
+  }
+  
+  .image-wrap {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    
+  }
+  
+  .image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-wrap img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 70px rgba(255,145,77,0.6);
+  }
+  
+  .aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 90px;
+    width: 333px;
+  }
+  
+  .aside h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 32px;
+    width: 264px;
+    margin-bottom: 50px;
+  }
+  
+  .aside p {
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    width: 333px;
+  }
+  
+  /* ========= CENTRAGE HEADER LARGE DESKTOP ========= */
+  @media (max-width: 1030px) {
+    .header {
+      width: 100%;
+      display: flex;
+      flex-direction: column; /* empile logo + titre + nav */
+      align-items: center;    /* centre horizontalement */
+      gap: 15px;
+      padding-top: 0px;
+    }
+  
+    .header-top {
+      flex-direction: column; /* logo au-dessus du h1 */
+      align-items: center;
+      gap: 8px;
+    }
+
+    
+  
+    .logo {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .site-title {
+      font-size: 50px;
+      text-align: center;
+      white-space: normal;
+    }
+  
+    .navigation {
+      width: auto;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px;
+    }
+  
+    .navigation a {
+      font-size: 16px;
+    }
+  
+    .image-wrap {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 15px;
+    }
+  
+    .page {
+      padding: 20px;
+      padding-top: 40px;
+    }
+  
+    .aside {
+      width: 100%;
+      max-width: 100%;
+      padding: 0px;
+      text-align: center;
+    }
+  
+    .aside h2 {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .aside p {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+  /* ========= RESPONSIVE MOBILE ========= */
+  @media (max-width: 768px) {
+    .page {
+      padding: 15px 20px;
+      width: calc(100% - 40px);
+    }
+  
+    .header-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    header.header {
+        margin-top: 0px;
+        padding-top: 0px;
+      }
+  
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .site-title {
+      font-size: clamp(32px, 5vw, 50px);
+      text-align: center;
+    }
+  
+    .navigation {
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+    }
+   n 
+    .navigation a {
+      font-size: 16px;
+    }
+  
+    .content {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+      gap: 15px;
+    }
+  
+    .image-wrap {
+      width: 100%;
+      max-width: 302px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .aside {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 333px;
+      padding: 0;
+    }
+  
+    .aside h2 {
+      font-size: 32px;
+      width: 100%;
+      margin-top: 20px;
+      max-width: 264px;
+      margin-bottom: 20px;
+    }
+  
+    .aside p {
+      font-size: 16px;
+      width: 100%;
+      max-width: 333px;
+    }
+  }
+  
+  /* ========= EXTRA PETITS ÉCRANS ========= */
+  @media (max-width: 420px) {
+    .navigation a {
+      font-size: 15px;
+    }
+  
+    .site-title {
+      font-size: 30px;
+    }
+  
+    .aside h2 {
+      font-size: 28px;
+    }
+  
+    .aside p {
+      padding: 0 6px;
+    }
+  }
