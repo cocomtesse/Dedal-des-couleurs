@@ -401,7 +401,6 @@
     word-wrap: break-word;
   }
   
-  
   .premiereoeuvre,
   .deuxiemeoeuvre,
   .troisiemeoeuvre,
@@ -718,57 +717,88 @@ h2#h2contact {
 
      /* ========= CENTRAGE HEADER LARGE DESKTOP ========= */
 
-     @media (max-width: 1210px) {
-
-        /* == artistes == */ 
-        .premiereoeuvre,
-        .quatriemeoeuvre {
-          margin-right: 20px;
-        }
-      
-        .troisiemeoeuvre,
-        .sixiemeoeuvre {
-          margin-left: 20px;
-        }
-      
-        #headerartistes {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 15px;
-          padding-top: 20px;
-          padding-bottom: 0px;
-        }
-      
-        .header-top-artistes {
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-        }
-      
-        h1#site-title-artistes {
-          font-size: 35px;
-          text-align: center;
-        }
-      
-        h2#h2artistes {
-          font-size: 50px;
-          text-align: center;
-          margin-top: 30px;
-        }
-      
-        #navigationartistes {
-          width: auto;
-          justify-content: center;
-          gap: 10px;
-          padding: 0px;
-        }
-      
-        #navigationartistes a {
-          font-size: 20px;
-        }
+   /* === RESPONSIVE LARGE DESKTOP / TABLETTE === */
+@media (max-width: 1210px) {
+    .premiereoeuvre,
+    .quatriemeoeuvre {
+      margin-right: 20px;
+    }
+  
+    .troisiemeoeuvre,
+    .sixiemeoeuvre {
+      margin-left: 20px;
+    }
+  
+    header#headerartistes {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      align-items: center;
+      padding-left: 0px;
+      padding-right: 0px;
+   
+    }
+    img#logoartistes {
+        width: 50px;
+       height: 50px;
+     
       }
+  
+    .header-top-artistes {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    h1#site-title-artistes {
+      font-size: 35px;
+      text-align: center;
+    }
+  
+    h2#h2artistes {
+      font-size: 50px;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+  
+    #navigationartistes {
+      width: auto;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px;
+    }
+  
+    #navigationartistes a {
+      font-size: 15px;
+    }
+  }
+  
+  /* === RESPONSIVE 1190px === */
+  @media (max-width: 1190px) {
+    .premiereoeuvre,
+    .quatriemeoeuvre {
+      margin-right: 20px;
+    }
+  
+    .troisiemeoeuvre,
+    .sixiemeoeuvre {
+      margin-left: 20px;
+    }
+  
+    .premiereoeuvre,
+    .deuxiemeoeuvre,
+    .troisiemeoeuvre,
+    .quatriemeoeuvre,
+    .cinquiemeoeuvre,
+    .sixiemeoeuvre {
+      max-width: 30%;
+    }
+  }
       
   @media (max-width: 1030px) {
 
@@ -794,8 +824,8 @@ h2#h2contact {
       height: 70px;
     }
   
-    .site-title-index {
-      font-size: 50px;
+    h1#site-title-index {
+      font-size: 40px;
       text-align: center;
       white-space: normal;
     }
@@ -845,7 +875,7 @@ h2#h2contact {
     .aside p {
       width: 100%;
       max-width: none;
-    }
+    } }
 
     @media screen and (max-width: 995px) {
 
@@ -962,88 +992,124 @@ h2#h2contact {
         }
         }
 
-        @media (max-width: 870px) {
-
-                 /* == artistes == */ 
-            .premiereoeuvre,
-            .deuxiemeoeuvre,
-            .troisiemeoeuvre,
-            .quatriemeoeuvre,
-            .cinquiemeoeuvre,
-            .sixiemeoeuvre {
-              flex: 1 1 45%;
-              margin-bottom: 30px;
-              margin-right: 0px;
-              margin-left: 0px;
-              width: 250px;
-            }
-          
-            .premiereoeuvre img,
-            .deuxiemeoeuvre img,
-            .troisiemeoeuvre img,
-            .quatriemeoeuvre img,
-            .cinquiemeoeuvre img,
-            .sixiemeoeuvre img {
-              width: 200px;
-            }
-          
-            .rangees {
-              gap: 0px;
-            }
-          
-            body#body-artistes {
-              padding: 20px;
-            }
-          }
-        @media screen and (max-width: 840px) {
-
-             /* == contact == */ 
+         /* === 2 PAR 2 A PARTIR DE 870px === */
+  @media (max-width: 870px) {
+    .premiereoeuvre,
+    .deuxiemeoeuvre,
+    .troisiemeoeuvre,
+    .quatriemeoeuvre,
+    .cinquiemeoeuvre,
+    .sixiemeoeuvre {
+      flex: 1 1 45%;
+      margin-bottom: 30px;
+      margin-right: 0;
+      margin-left: 0;
+      width: 250px;
+    }
   
-            .contact {
-                align-items: center;
-              }
-            header#header-contact {
-              width: 100%;
-              flex-direction: column;
-              align-items: center;
-              gap: 3px;
-              padding-top: 20px;
-            }
-          
-            .header-top-contact {
-              flex-direction: column;
-              align-items: center;
-              gap: 3px;
-            }
-          
-        #logocontact {
-              width: 50px;
-              height: 50px;
-            }
-          
-            h1#site-title-contact {
-              font-size: 35px;
-              text-align: center;
-            }
-          
-           
-          
-            #navigationcontact {
-              width: 100%;
-              justify-content: center;
-              flex-wrap: wrap;
-              gap: 8px;
-              padding: 0;
-            }
-          
-            #navigationcontact a {
-              font-size: 15px;
-            }
-          
-            body#body-contact {
-            justify-content: center;
-            }
-            }
+    .premiereoeuvre img,
+    .deuxiemeoeuvre img,
+    .troisiemeoeuvre img,
+    .quatriemeoeuvre img,
+    .cinquiemeoeuvre img,
+    .sixiemeoeuvre img {
+      width: 200px;
+      padding: 15px;
+    }
+  
+    .rangees {
+      gap: 0px;
+    }
+  
+    body {
+      padding: 0px;
+    }
+  }
+  
+  
+  /* === 2 PAR 2 A PARTIR DE 870px === */
+  @media (max-width: 870px) {
+    .premiereoeuvre,
+    .deuxiemeoeuvre,
+    .troisiemeoeuvre,
+    .quatriemeoeuvre,
+    .cinquiemeoeuvre,
+    .sixiemeoeuvre {
+      flex: 1 1 45%;
+      margin-bottom: 30px;
+      margin-right: 0px;
+      margin-left: 0px;
+      width: 250px;
+    }
+  
+    .premiereoeuvre img,
+    .deuxiemeoeuvre img,
+    .troisiemeoeuvre img,
+    .quatriemeoeuvre img,
+    .cinquiemeoeuvre img,
+    .sixiemeoeuvre img {
+      width: 200px;
+    }
+  
+    .rangees {
+      gap: 0px;
+    }
+  
+    body {
+      padding: 20px;
+    }
+  }
+  @media screen and (max-width: 840px) {
+
+    /* == contact == */ 
+
+   .contact {
+       align-items: center;
+     }
+   header#header-contact {
+     width: 100%;
+     flex-direction: column;
+     align-items: center;
+     gap: 3px;
+     padding-top: 20px;
+   }
+ 
+   .header-top-contact {
+     flex-direction: column;
+     align-items: center;
+     gap: 3px;
+   }
+ 
+#logocontact {
+     width: 50px;
+     height: 50px;
+   }
+ 
+   h1#site-title-contact {
+     font-size: 35px;
+     text-align: center;
+   }
+ 
+  
+ 
+   #navigationcontact {
+     width: 100%;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 8px;
+     padding: 0;
+   }
+ 
+   #navigationcontact a {
+     font-size: 15px;
+   }
+ 
+   body#body-contact {
+   justify-content: center;
+   }
+   }
+  
+  
             @media (max-width: 768px) {
 
                  /* == index == */ 
@@ -1078,7 +1144,7 @@ h2#h2contact {
                   justify-content: center;
                   gap: 10px;
                 }
-               n 
+               
                 #navigationindex a {
                   font-size: 16px;
                 }
@@ -1087,7 +1153,7 @@ h2#h2contact {
                   flex-direction: column;
                   align-items: center;
                   margin-top: 15px;
-                  gap: 15px;
+                  gap: 0px;
                 }
               
                 .image-wrap {
@@ -1103,7 +1169,7 @@ h2#h2contact {
                   align-items: center;
                   text-align: center;
                   width: 100%;
-                  max-width: 333px;
+                  max-width: 340px;
                   padding: 0;
                 }
               
@@ -1120,7 +1186,154 @@ h2#h2contact {
                   width: 100%;
                   max-width: 333px;
                 }
-              }
+               
+    body#body-artistes {
+      padding: 10px;
+    }
+  
+    .header {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding-top: 20px;
+    }
+  
+    .header-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+  
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+  
+    h1 {
+      font-size: 35px;
+      text-align: center;
+    }
+  
+    .navigation {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+    }
+  
+    .navigation a {
+      font-size: 15px;
+    }
+  
+    .rangees {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      justify-items: center;
+      width: 100%;
+    }
+  
+    .premiereoeuvre,
+    .deuxiemeoeuvre,
+    .troisiemeoeuvre,
+    .quatriemeoeuvre,
+    .cinquiemeoeuvre,
+    .sixiemeoeuvre {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 5px;
+      margin-bottom: 0px;
+    }
+  
+    .premiereoeuvre img,
+    .deuxiemeoeuvre img,
+    .troisiemeoeuvre img,
+    .quatriemeoeuvre img,
+    .cinquiemeoeuvre img,
+    .sixiemeoeuvre img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  
+    h2#h2artistes {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      
+  }
+  .premiereoeuvre p,
+  .deuxiemeoeuvre p,
+  .troisiemeoeuvre p,
+  .quatriemeoeuvre p,
+  .cinquiemeoeuvre p,
+  .sixiemeoeuvre p
+  {
+    line-height: 1.1;
+    font-size: 18px;
+  }
+  .page {
+    padding: 0px;
+    width: calc(100% - 40px);
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  header.header {
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .site-title {
+    font-size: clamp(32px, 5vw, 50px);
+    text-align: center;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+ n 
+  .navigation a {
+    font-size: 16px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+
+  .image-wrap {
+    width: 100%;
+    max-width: 302px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
+
+}
 
               @media screen and (max-width: 679px) {
 
@@ -1276,6 +1489,7 @@ h2#h2contact {
         
             .contact {
                 display: flex;
+                margin-top: 8px;
                 flex-direction: column;
                 gap: 20px;
                 width: 100%;
@@ -1284,6 +1498,7 @@ h2#h2contact {
                 justify-content: center;
                 padding: 0;           /* supprime padding gauche qui décale */
             }
+
           
             .contact-map {
                 width: 100%;
@@ -1295,7 +1510,7 @@ h2#h2contact {
             }
           
             .contact-map img {
-                width: 60%;      /* ajuste largeur pour mobile */
+                width: 50%;      /* ajuste largeur pour mobile */
                 max-width: 300px; /* limite taille si écran très large */
                 height: auto;
                 object-fit: cover;
@@ -1317,6 +1532,7 @@ h2#h2contact {
     
             h2#h2contact {
                 font-size: 40px;
+                padding-top: 10px;
                 
               }
     
@@ -1409,6 +1625,8 @@ h2#h2contact {
             
             margin-bottom:15px;
           }
+    
+         
           }
 
             
@@ -1434,9 +1652,6 @@ h2#h2contact {
     }
   }
   @media (max-width: 400px) {
-
-        /* == artistes == */ 
-
     .rangees {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1451,7 +1666,7 @@ h2#h2contact {
     .quatriemeoeuvre img,
     .cinquiemeoeuvre img,
     .sixiemeoeuvre img {
-      width: 70%;
+      width: 95%;
       max-width: 100%;
       height: auto;
       object-fit: contain;
@@ -1464,16 +1679,15 @@ h2#h2contact {
     .sixiemeoeuvre p
     {
       line-height: 1.1;
+      display: flex;
+      flex-direction: column;
     }
     h2#h2artistes {
-      margin-bottom: 40px;
-      margin-top: 40px;
-      font-size: 44px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+      font-size: 40px;
+      width : 200px;
     }
     
-  }
-  
-      
-      
   }
   
